@@ -50,8 +50,8 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 		* If unspecified, .keystore is used as a default.
 	* validity: Number of days until the key pair becomes invalid.
 		* If unspecified, 90 days is used as a default.
-		* The maximum number of days accepted by keytool, 999999999999999999, equates to 2739726027397261 years.
-		* The maximum number of days accepted by apksigner, 9999999999999999, equates to 27397260273973 years
+		* The number of days, when added to the current date, must not result in a date after the end of year 9999.
+		* Keytool will accept up to 9223372036854775807 days, however they result in invalid dates.
 	* keysize: Number of bits in a key.
 		* If unspecified, the default is chosen based on keyalg.
 		* 1024 bits is used as the default with DSA.
@@ -166,7 +166,7 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 	
 #### Recommended Keytool Genkeypair Settings
 * keystore: appName.jks, where appName is replaced with the app's name
-* validity: 9999999999999999 (27397260273973 years)
+* validity: 365000 (1000 years)
 * keysize: 4096
 * keyalg: RSA
 * sigalg: SHA1withRSA for Android API Level < 18 or SHA512withRSA for Android API Level >= 18 
