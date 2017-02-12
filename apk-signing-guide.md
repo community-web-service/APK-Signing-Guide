@@ -5,22 +5,6 @@
 * This document is geared towards Windows users. Some steps may need to be modified for other operating systems.
 * Only those aspects of the tools and concepts discussed here that apply to APK signing will be discussed.
 
-## Todo
-* Explain how a public key is stored within a certificate.
-* Explain how APK signature validation works.
-* Add instructions for how to install and configure both JDK and Android SDK Build Tools
-* Consider adding a tl;dr section
-* Determine if Android API Level >= 24 with APK Signature Scheme v2 supports MD5, SHA1, and SHA384.
-* Explain why it is important to use secure hash functions and key algorithms when signing APKs
-	* Future proofing against depreciation.
-	* Prevention of collision attacks.
-* Explain different hash functions and key algorithms.
-* Note that apksigner can accept a keyfile and a certificate file in place of a keystore.
-* List additional apksigner commands.
-* Explain how to generate a debug keystore.
-* Consider adding examples.
-* Detail z flag for zipalign.
-
 ## Prerequisites
 * Ensure that JDK and Android SDK Build Tools are installed and properly configured.
 
