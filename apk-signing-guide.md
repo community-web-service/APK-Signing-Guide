@@ -191,6 +191,7 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 		* Alignment must always be 4 when aligning APKs. This results in 32-bit alignment.
 	* input_file: APK to be aligned
 	* output_file: Filename for aligned APK
+		* If unspecified, the unaligned APK is replaced.
 	
 #### Recommended Zipalign Settings
 * Flags: -f -v
