@@ -206,7 +206,7 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 * Apksigner is a command line application that signs APKs
 * Other applications, such as jarsigner, may be used to sign APKs, however they will only apply APK Signature Scheme v1, which is the same as a standard JAR signature.
 * The sign command is used to sign an APK.
-	* The sign command accepts arguments in the following format: `--ks <keystore> [signer_options] <apk>`
+* The sign command accepts arguments in the following format: `--ks <keystore> [signer_options] <apk>`
 	* keystore: Keystore to use for signing.
 	* signer_options: Options passed as flags, i.e. `--out`
 		* out: Filename for signed APK.
@@ -220,6 +220,11 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 			* If unspecified, the default is based on min-sdk-version.
 		* v2-signing-enabled: Forces or prevents implementation of APK Signature Scheme v2
 			* If unspecified, the default is based on min-sdk-version.
+		* ks-key-alias: Alias under which the signing key pair is stored within the keystore
+			* If unspecified and only one alias is found in the keystore, that alias is used as the default.
+			* If multiple aliases are found within the keystore, this option must be specified.
+		* ks-pass: Password used to unlock the keystore.
+			* If unspecified, the user will be prompted.
 		* v: Enable verbose output.
 	* apk: Apk to be signed.
 
